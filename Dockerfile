@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     wget \
+    libxml2-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd mysqli pdo_mysql zip \
-    && a2enmod rewrite
+    && a2enmod rewrite\
+    && docker-php-ext-install soap
