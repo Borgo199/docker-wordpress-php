@@ -1,4 +1,4 @@
-FROM php:8.1-apache
+FROM php:8.4-apache
 
 # Copy specific PHP configuration file
 COPY ./config/000-default.conf /etc/apache2/sites-available/000-default.conf
