@@ -4,6 +4,7 @@ FROM php:8.4-apache
 COPY ./config/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY ./config/php.ini-development /usr/local/etc/php/php.ini-development
 COPY ./config/php.ini-production /usr/local/etc/php/php.ini-production
+COPY ./config/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
 # Install dependencies and enable Apache modules required for WordPress
 RUN apt-get update && apt-get install -y \
