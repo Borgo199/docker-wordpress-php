@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-      - 8.x
-      - 7.x
+      - 8.*
+      - 7.*
 
 jobs:
   build:
